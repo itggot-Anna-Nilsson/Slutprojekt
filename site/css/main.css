@@ -8,6 +8,123 @@ p{
     margin: 0;
 }
 
+
+/*to get a nice nav, collected from */
+.toolbar {
+  height: 56px;
+  width: 100%;
+  background-color: #763ab7;
+  box-shadow: 0 2px 40px 0;
+  position: fixed;
+}
+.menu {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  background-color: #FFFFFF;
+  height:100vh;
+  top: 0;
+  width: calc(100vw - 56px);
+  left: calc((100vw - 56px) * -1);
+  animation: pulse 0.5s 1;
+  z-index: 50
+}
+/*utdragen meny*/
+.menuvisible {
+  animation: show 0.5s 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show{
+  0% {
+    left: calc((100vw - 56px)* -1);
+  }
+  100% {
+    left: 0px;
+  }
+}
+.menuhidden{
+  animation: hide 0.5s 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hide{
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: calc((100vw - 56px)* -1);
+  }
+}
+
+.darkbox{
+  display: none;
+}
+
+.opacity0{
+  background-color: black;
+  opacity: 0.5;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  position: fixed;
+  animation: fadein 0.5s 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadein{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0.5;
+  }
+}
+
+.opacity50{
+  animation: fadeout 0.2s 1;
+  animation-fill-mode: forwards;
+  display: none;
+  position: fixed;
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+.arrow {
+  position: fixed;
+  left: 20px;
+  top: 14px;
+  color: white;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+  margin-top: 10px;
+  font-size: 25px;
+  font-family: 'Roboto', sans-serif;
+}
+
+a:hover,active {
+  color:orange;
+  text-decoration: none;
+  font-size: 25px;
+}
+/*end of borrowed code*/
+ul{
+  list-style-type: none;
+}
+li{
+  text-decoration: none;
+}
+
 /*Sizing for the parallax*/
 .abyss{
     width: 100vw;
@@ -52,6 +169,7 @@ article{
   /*centrera!!*/
 }
 
+
 /*@media screen and (min-width: 412px)# and (max-width: 412px) and (min-height: 732px) and (max-height: 732px){*/
 @media screen and (min-width: 412px) and (max-width: 412px) {
 
@@ -73,7 +191,6 @@ article{
       top: 0;
   }
 
-  /*move to all css*/
   .read_more{
     display: flex;
     background-color: orange;
@@ -85,6 +202,8 @@ article{
     align-items: center;
     justify-content: center;
   }
+
+  /*move to all css*/
 
   .test{
     height: 700px;
