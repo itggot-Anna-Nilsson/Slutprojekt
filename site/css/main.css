@@ -11,6 +11,90 @@ p{
 }
 
 
+.s_box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 200px;
+}
+.social_media{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 80vh;
+  background-color: white;
+}
+
+.s_icon{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+/*sPRITE BEGIN*/
+.sprite {
+    background-image: url("../img/spritesheet.png");
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-gmail {
+    width: 192px;
+    height: 192px;
+    background-position: -5px -5px;
+}
+
+.sprite-googleplus {
+    width: 192px;
+    height: 192px;
+    background-position: -207px -5px;
+}
+
+.sprite-redditnews {
+    width: 192px;
+    height: 192px;
+    background-position: -409px -5px;
+}
+
+.sprite-runescape {
+    width: 192px;
+    height: 192px;
+    background-position: -5px -207px;
+}
+
+.sprite-comment {
+    width: 192px;
+    height: 192px;
+    background-position: -207px -207px;
+}
+
+.sprite-telegram {
+    width: 192px;
+    height: 192px;
+    background-position: -409px -207px;
+}
+
+.sprite-tumblr {
+    width: 192px;
+    height: 192px;
+    background-position: -5px -409px;
+}
+
+.sprite-twitter {
+    width: 192px;
+    height: 192px;
+    background-position: -207px -409px;
+}
+
+.sprite-youtube {
+    width: 192px;
+    height: 192px;
+    background-position: -409px -409px;
+}
+
+/*SPRITE END*/
+
 /*to get a nice nav, collected from */
 /*DESKTOP VERSION; TO BE BUGGY.....*/
 .menu {
@@ -157,9 +241,78 @@ article{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 100px; 
+    margin-top: 100px;
     margin-left: -400px;
   }
+
+  .menu {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    height:94px;
+    width:100vw;
+    top: -94px;
+    animation: pulse 0.5s 1;
+    z-index: 50
+  }
+
+  .read_more{
+    display: flex;
+    background-color: orange;
+    width: 100px;
+    height: 50px;
+    color: white;
+    margin-left: 135px;
+    margin-top: 25px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  background-color: #FFFFFF;
+  height:100vh;
+  top: 0;
+  width: 200px;
+  left: -200px;
+  animation: pulse 0.5s 1;
+  z-index: 50
+}
+
+/*utdragen meny*/
+.menuvisible {
+  animation: show 0.5s 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show{
+  0% {
+    left: -200px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+.menuhidden{
+  animation: hide 0.5s 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hide{
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: -200px;
+  }
+}
+
+  /*End animation for menu*/
+}
 
 
 }
@@ -173,7 +326,7 @@ article{
     flex-direction: column;
   }
 
- 
+
   article{
       background-color: darkblue;
       color: white;
@@ -211,7 +364,6 @@ article{
   background-color: #FFFFFF;
   height:100vh;
   top: 0;
-  /*margin-top: 732px; */
   width: calc(100vw - 56px);
   left: calc((100vw - 56px) * -1);
   animation: pulse 0.5s 1;
@@ -232,6 +384,7 @@ article{
     left: 0px;
   }
 }
+
 .menuhidden{
   animation: hide 0.5s 1;
   animation-fill-mode: forwards;
