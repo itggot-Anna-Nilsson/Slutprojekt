@@ -1,5 +1,4 @@
-/*This is for everything that is the same everywhere aswell as DESKTOP*/
-/*DESKTOP*/
+
 body{
     margin: 0;
     background-color: #000c2a;
@@ -362,7 +361,7 @@ p{
     width:100vw;
     top: -200px;
     animation: pulse 0.5s 1;
-    z-index: 50
+    z-index: 50;
   }
 
   /*utdragen meny*/
@@ -379,6 +378,7 @@ p{
       top: 56px;
     }
   }
+
   .menuhidden{
     animation: hide 0.5s 1;
     animation-fill-mode: forwards;
@@ -480,9 +480,6 @@ p{
 
 }
 
-
-
-/*@media screen and (min-width: 412px)# and (max-width: 412px) and (min-height: 732px) and (max-height: 732px){*/
 @media screen and (min-width: 412px) and (max-width: 412px) {
   ul{
     display: flex;

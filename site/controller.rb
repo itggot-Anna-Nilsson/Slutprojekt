@@ -1,1 +1,0 @@
-layout("laoyut.html.erb")
